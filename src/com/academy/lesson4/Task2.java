@@ -8,7 +8,6 @@ public class Task2 {
 
         testCurrencyFormat(reg);
     }
-
     public static void testCurrencyFormat(String regexFormat){
 
         Scanner scanner = new Scanner(System.in);
