@@ -1,4 +1,4 @@
-package com.academy;
+package com.academy.lesson4;
 import java.util.regex.Pattern;
 public class Task3 {
     public static void main(String[] args) {

@@ -1,5 +1,4 @@
-package com.academy;
-
+package com.academy.lesson3;
 import java.util.Scanner;
 
 public class Task8 {
