@@ -4,8 +4,8 @@ public class Button {
     public static String color = "grey";
     private final int maxHeight;
     private int height;
-    protected int width;
-    public String text;
+    private int width;
+    protected String text;
 
     public Button() {
         maxHeight = 150;
@@ -43,4 +43,3 @@ public class Button {
         this.text = text;
     }
 }
-
