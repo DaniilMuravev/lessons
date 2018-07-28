@@ -1,6 +1,7 @@
 package com.academy.lesson7.DZ;
 
-import com.academy.lesson7.demo.DateTime;
+
+import com.academy.lesson7.DZ.Data;
 
 public class Task1 {
     public static void main(String[] args) {
@@ -14,9 +15,9 @@ public class Task1 {
         System.out.println(date1.equals(date3));
         System.out.println(date2.equals(date3));
 
-        DateTime dateTime1 = new DateTime(2014,11,8,14,51,42);
-        DateTime dateTime2 = new DateTime(2013,9,28,18,7,30);
-        DateTime dateTime3 = new DateTime(2014,11,8,14,51,42);
+        DataTime dateTime1 = new DataTime(2014,11,8,14,51,42);
+        DataTime dateTime2 = new DataTime(2013,9,28,18,7,30);
+        DataTime dateTime3 = new DataTime(2014,11,8,14,51,42);
 
         System.out.println(dateTime1);
         System.out.println(dateTime2);
@@ -31,3 +32,4 @@ public class Task1 {
 
     }
 }
+

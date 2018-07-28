@@ -33,4 +33,18 @@ public class Date {
 
         return Objects.hash(year, month, day);
     }
+    public boolean isLeap (){
+//   4 true
+//    100 not true
+//    400 true
+//    return false;
+//    if (this.year % 4 == 0 && this.year % 400 == 0)
+//        return true;
+//    else
+//        return false;
+        if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)))
+            return true;
+        else
+            return false;
+    }
 }
