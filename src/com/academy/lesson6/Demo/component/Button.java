@@ -1,5 +1,6 @@
 package com.academy.lesson6.Demo.component;
 
+
 public class Button {
     public static String color = "grey";
     private final int maxHeight;

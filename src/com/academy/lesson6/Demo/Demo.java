@@ -4,6 +4,7 @@ import com.academy.lesson6.Task.Currency;
 
 import java.util.Arrays;
 public class Demo {
+
     public static void main(String[] args) {
         int h = 10;
         int w = 20;

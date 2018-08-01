@@ -28,15 +28,15 @@ public class Task3a {
         Currency cur3 = new Currency(150, "руб");
         Currency cur4 = new Currency(10, "$");
         Currency cur5 = new Currency(4, "руб");
-        cur1.printCurr();
-        cur2.printCurr();
-        cur3.printCurr();
-        cur4.printCurr();
-        cur1.addCurrency(cur2);
-        cur1.addCurrency(cur4);
-        cur1.substrCurrency(cur2);
-        cur3.divCurrency(cur2);
-        cur1.multCurrency(cur5);
+        cur1.printCur();
+        cur2.printCur();
+        cur3.printCur();
+        cur4.printCur();
+        cur1.addCurrenc(cur2);
+        cur1.addCurrenc(cur4);
+        cur1.substrCurrenc(cur2);
+        cur3.divCurrenc(cur2);
+        cur1.multCurrenc(cur5);
 
     }
 }

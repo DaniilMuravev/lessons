@@ -22,14 +22,20 @@ package com.academy.lesson6.Task;
         void divide(double factor); // деление суммы на число
         void multiply(double factor); // умножение суммы на число
 */
+import java.util.Objects;
 public class Currency {
 
+    private static final String[] CURRENCIES_SUPPORTED = {"грн", "руб", "$"};
     private double value;
     private String name;  ///("грн", "руб", "$")
 
+    private boolean valid = true;
 
-    // TODO check
     public Currency(double value, String name) {
+        if (!ensureValidCurrency(name)) {
+            valid = false;
+            return;
+        }
         this.value = value;
         this.name = name;
     }
@@ -51,9 +57,16 @@ public class Currency {
         return name;
     }
 
-    // TODO check
     public void setName(String name) {
+        if (!ensureValidCurrency(name)) {
+            valid = false;
+            return;
+        }
         this.name = name;
+    }
+
+    public boolean isValid() {
+        return valid;
     }
 
     public void print() {
@@ -69,44 +82,57 @@ public class Currency {
 
         return true;
     }
-    // Сложение и проверка "грн,руб,$"
-    public void addCurrency(Currency other) {
-        double summ = (this.value + other.value);
-        if (this.name.equals(other.name))
-            System.out.println("Сумма " + summ + name);
 
-        else
-            System.out.println("Error: currency names are differ 'грн' - 'руб'");
-    }
-    //Вычитание
-    public void substrCurrency(Currency other) {
-        double subst = (this.value - other.value);
-        if (this.name.equals(other.name))
-            System.out.println("Остаток " + subst + name);
+    // TODO check name is correspond to CURRENCIES_SUPPORTED
+    private boolean ensureValidCurrency(String name) {
+        for (String item : CURRENCIES_SUPPORTED)
+            if (item.equals(name))
+                return true;
 
-        else
-            System.out.println("Error: currency names are differ 'грн' - 'руб'");
-    }
-    public void divCurrency(Currency other) {
-        double div = (this.value / other.value);
-        if (this.name.equals(other.name))
-            System.out.println("Результат деления " + div + name);
-
-        else
-            System.out.println("Error: currency names are differ 'грн' - 'руб'");
-
-    }
-    public void multCurrency(Currency other) {
-        double mult = (this.value * other.value);
-        if (this.name.equals(other.name))
-            System.out.println("Результат умножения " + mult + name);
-
-        else
-            System.out.println("Error: currency names are differ 'грн' - 'руб'");
-
+        return false;
     }
 
-    public void printCurr(){
-        System.out.println("Баланс " + value + name);
+    @Override
+    public String toString() {
+        return String.format("%.2f%s", value, name);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Currency currency = (Currency) o;
+        return Double.compare(currency.value, value) == 0 &&
+                Objects.equals(name, currency.name);
+
+//        Currency other = (Currency) o;
+//        if (this.value != other.value)
+//            return false;
+//
+//        if (!this.name.equals(other.name))
+//            return false;
+//
+//        return true;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(value, name);
+    }
+
+    public void printCur() {
+    }
+
+    public void addCurrenc(Currency cur2) {
+    }
+
+    public void substrCurrenc(Currency cur2) {
+    }
+
+    public void divCurrenc(Currency cur2) {
+    }
+
+    public void multCurrenc(Currency cur5) {
     }
 }
